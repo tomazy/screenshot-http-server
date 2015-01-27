@@ -1,5 +1,6 @@
 {
   "name": "screenshot-server",
+  "private": true,
   "version": "0.0.1",
   "description": "Takes screenshots and serves them via http",
   "scripts": {
