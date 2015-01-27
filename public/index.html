@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>server screenshot</title>
+<style>
+  body{
+    margin: 0;
+    background-color: #111;
+  }
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+</head>
+<body>
+  <img>
+  <script>
+    (function init(){
+      'use strict';
+      var evtSource = new EventSource('/events');
+      var img = document.querySelector('img');
+      var currentScreenshot, lastScreenshot;
+      var imageReady = true;
+
+      function updateImage(){
+        if (imageReady && currentScreenshot != lastScreenshot){
+          img.src = lastScreenshot = currentScreenshot;
+          imageReady = false;
+        }
+      }
+
+      img.addEventListener('load', function(){
+        imageReady = true
+        updateImage();
+      });
+
+      img.addEventListener('error', function(){
+        imageReady = true
+      });
+
+      evtSource.addEventListener('screenshot', function(event){
+        currentScreenshot = event.data;
+        updateImage();
+      });
+    })();
+  </script>
+  <a href="/?t=1000&q=15">low quality</a>
+  <a href="/?t=1000&q=100">hight quality</a>
+</body>
+</html>

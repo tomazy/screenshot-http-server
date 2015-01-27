@@ -1,0 +1,15 @@
+{
+  "name": "screenshot-server",
+  "version": "0.0.1",
+  "description": "Takes screenshots and serves them via http",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tomazy",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.1.1",
+    "event-source-manager": "0.0.1",
+    "express": "~4.11.1"
+  }
+}
