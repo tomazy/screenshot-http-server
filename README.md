@@ -6,7 +6,7 @@ Can be used to visually inspect running selenium tests in a headless box with Xv
 
 ## Requirements:
 - npm
-- imagemagick
+- ImageMagick
 
 ## Installation:
 ```
