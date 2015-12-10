@@ -2,6 +2,14 @@
   "name": "screenshot-http-server",
   "version": "0.0.1",
   "description": "Takes screenshots and serves them via http",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tomazy/screenshot-http-server.git"
+  },
+  "keywords": [
+    "cli",
+    "command"
+  ],
   "scripts": {
     "start": "./bin/screenshot-http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +20,9 @@
     "debug": "^2.1.1",
     "event-source-manager": "0.0.1",
     "express": "~4.11.1"
+  },
+  "bin": {
+    "screenshot-http-server": "./bin/screenshot-http-server",
+    "shs": "./bin/screenshot-http-server"
   }
 }
