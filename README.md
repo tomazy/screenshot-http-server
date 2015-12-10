@@ -10,12 +10,12 @@ I use it to visually inspect running selenium tests in a headless box with Xvfb.
 
 ## Installation:
 ```
-npm install -g screenshot-server
+npm install -g screenshot-http-server
 ```
 
 ## Running:
 ```
-PORT=8989 screenshot-server
+PORT=8989 screenshot-http-server
 ```
 
 Point browser to `http://<host name>:8989` 
