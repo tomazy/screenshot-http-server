@@ -1,6 +1,6 @@
 {
   "name": "screenshot-http-server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Takes screenshots and serves them via http",
   "repository": {
     "type": "git",
